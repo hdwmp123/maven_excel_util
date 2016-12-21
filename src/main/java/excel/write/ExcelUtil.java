@@ -10,6 +10,14 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.poi.util.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.csvreader.CsvReader;
+import com.csvreader.CsvWriter;
+
+import excel.utils.BeanUtil;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -21,15 +29,6 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
-
-import org.apache.poi.util.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.csvreader.CsvReader;
-import com.csvreader.CsvWriter;
-
-import excel.utils.BeanUtil;
 
 /**
  * excel数据导出
