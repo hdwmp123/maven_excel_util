@@ -249,7 +249,9 @@ public class Excel2007Reader extends DefaultHandler {
 			value = (value == null ? null : this.getDataValue(value.toString()
 					.trim()));
 			this.preCol = this.curCol;
-			this.rowList.add(this.curCol - 1, value);
+            if (this.curCol > 0) {
+			    this.rowList.add(this.curCol - 1, value);
+			}
 		} else {
 			// 如果标签名称为 row ，这说明已到行尾，调用 optRows() 方法
 			if (name.equals("row")) {
