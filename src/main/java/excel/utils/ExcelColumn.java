@@ -2,7 +2,7 @@ package excel.utils;
 
 public class ExcelColumn {
     public static void main(String[] args) {
-        String colstr = "AA";
+        String colstr = "A";
         int colIndex = excelColStrToNum(colstr);
         System.out.println("'" + colstr + "' column index of " + colIndex);
 
@@ -36,6 +36,7 @@ public class ExcelColumn {
             num *= Math.pow(26, i);
             result += num;
         }
+        result = result - 1;
         return result;
     }
 
