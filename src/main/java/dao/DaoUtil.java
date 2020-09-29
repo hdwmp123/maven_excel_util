@@ -7,18 +7,17 @@ import org.nutz.ioc.loader.json.JsonLoader;
 
 import redis.clients.jedis.JedisPool;
 
+/**
+ * @author kingtiger
+ */
 public class DaoUtil {
 
     public DaoUtil() {
     }
 
-    static Ioc ioc = new NutIoc(new JsonLoader(new String[] { "ioc.js" }));
+    static Ioc ioc = new NutIoc(new JsonLoader(new String[]{"ioc.js"}));
 
-    // static DataSource ds = ioc.get(javax.sql.DataSource.class);
-    // static Dao dao = new NutDao(ds);
     public static Dao getDao() {
-        // ioc.depose();
-        // return dao;
         return ioc.get(Dao.class);
     }
 

@@ -342,7 +342,7 @@ public class Excel2003Reader implements HSSFListener {
 				}
 			}
 			if (this.curRow == this.titleRow || this.curRow >= this.dataRow) {
-				this.returnResult = this.rowReader.getRows(this.sheetIndex,
+				this.returnResult = this.rowReader. getRows(this.sheetIndex,
 						this.curRow, this.rowList);
 			}
 			if (this.curRow != 0

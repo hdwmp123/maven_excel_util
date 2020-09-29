@@ -9,13 +9,13 @@ var ioc = {
 		type : "org.nutz.dao.impl.SimpleDataSource",
 		fields : {
 			jdbcUrl : {
-				java : "$conf.get('jdbcUrl')"
+				java : "$conf.get('database.url')"
 			},
 			username : {
-				java : "$conf.get('user')"
+				java : "$conf.get('database.username')"
 			},
 			password : {
-				java : "$conf.get('password')"
+				java : "$conf.get('database.password')"
 			},
 		}
 	},
